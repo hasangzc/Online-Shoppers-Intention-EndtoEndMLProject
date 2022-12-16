@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/online_shoppers_intention.csv
+      md5: 5428f8d61fd65304b6ceb08a9bcefce2
+      size: 1072063
+    - path: src/get_data.py
+      md5: 1b05443140673492db1bb1cdfe64520e
+      size: 604
+    - path: src/load_data.py
+      md5: a9cb97821ffbbc151c908cf0ad6e8fd0
+      size: 490
+    outs:
+    - path: data/raw/online_shoppers_intention.csv
+      md5: a319389cb6beb00470abd5def220258c
+      size: 1156949
